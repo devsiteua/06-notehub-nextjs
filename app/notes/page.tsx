@@ -1,5 +1,7 @@
+import NotesClient from './Notes.client';
+
 const Notes = () => {
-  return <div>Notes</div>;
+  return <NotesClient />;
 };
 
 export default Notes;
