@@ -46,3 +46,8 @@ export async function deleteNote(noteId: string): Promise<Note> {
 
   return response.data;
 }
+
+export async function fetchNoteById(noteId: string): Promise<Note> {
+  const response = await notehubApi.get<Note>(`/notes/${noteId}`);
+  return response.data;
+}

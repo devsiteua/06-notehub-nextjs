@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import type { Note } from '@/types/note';
 import css from './NoteList.module.css';
 
@@ -21,6 +23,10 @@ export default function NoteList({
 
           <div className={css.footer}>
             <span className={css.tag}>{note.tag}</span>
+
+            <Link href={`/notes/${note.id}`} className={css.link}>
+              View details
+            </Link>
 
             <button
               className={css.button}
